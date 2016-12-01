@@ -15,7 +15,7 @@ jobs:
       - TASK: managed
 
 # TEST deployment to Amazon ECS
-  - name: yourName-ecs-deploy-test-front-end
+  - name: wong-ecs-deploy-test-front-end
     type: deploy
     steps:
       - IN: man-front-end
@@ -43,10 +43,10 @@ jobs:
 
 # move this block to separate repo to limit PROD deployment to different users
 # PROD deployment to Amazon ECS
-  - name: yourName-ecs-deploy-prod-front-end
+  - name: wong-ecs-deploy-prod-front-end
     type: deploy
     steps:
-      - IN: yourName-ecs-deploy-test-front-end
+      - IN: wong-ecs-deploy-test-front-end
         switch: off
       # - IN: release-front-end
       #   switch: off
